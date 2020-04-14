@@ -1,6 +1,7 @@
 package com.crudcraigslist.shitty.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,4 +20,10 @@ public class CategoryServiceImpl implements CategoryService {
 		return repo.findAll();
 	}
 
+	@Override
+	public Optional<Category> findCategoryById(Integer id) {
+		return repo.findById(id);
+	}
+	
+	
 }

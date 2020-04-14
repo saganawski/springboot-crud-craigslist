@@ -9,7 +9,7 @@
 	<h1>Shitty CraigsList springboot crud Demo</h1>
 	
 	<h1 th:each="category : ${categories}">
-		<a th:href="@{'/category/' + ${category.id}}"><span th:text = "${category.name}"></span></a>
+		<a th:href="@{'/categories/' + ${category.id} + '/post'}"><span th:text = "${category.name}"></span></a>
 	</h1>
 
 </body>
