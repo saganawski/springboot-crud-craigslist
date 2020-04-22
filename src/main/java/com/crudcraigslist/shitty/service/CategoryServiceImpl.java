@@ -24,6 +24,15 @@ public class CategoryServiceImpl implements CategoryService {
 	public Optional<Category> findCategoryById(Integer id) {
 		return repo.findById(id);
 	}
+
+	@Override
+	public Boolean save(Category category) {
+		final Category newCat = repo.save(category);
+		if(newCat != null) {
+			return true;
+		}
+		return false;
+	}
 	
 	
 }

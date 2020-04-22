@@ -32,7 +32,6 @@ public class Category {
 	@Column(name = "created_date", insertable = false, updatable = false)
 	private Date createdDate;
 	
-//	@OneToMany(fetch = FetchType.LAZY, mappedBy = "category_id", cascade = CascadeType.ALL, orphanRemoval = true)
 	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
 	@JoinColumn(name="category_id")
 	private Set<Post> posts = new HashSet<>(0);

@@ -11,4 +11,6 @@ public interface CategoryService {
 	
 	Optional<Category> findCategoryById(Integer id);
 
+	Boolean save(Category category);
+
 }

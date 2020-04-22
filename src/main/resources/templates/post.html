@@ -6,10 +6,21 @@
 <title>Posts</title>
 </head>
 <body>
-	<h1 th:text = "${category.name} + ' posts'"></h1>
-	
-	<h1 th:each="post : ${posts}">
-		<span th:text = "${post.name}"></span>
-	</h1>
+	<div align="center">
+		<h1 th:text = "${category.name} + ' posts'"></h1>
+		
+		<h1 th:each="post : ${posts}">
+			<span th:text = "${post.name}"></span>
+			<form th:action="@{'/categories/' + ${category.id} + '/posts/' +${post.id} +'/edit'}" method="get">
+				<button type="submit">Edit</button>
+			</form>
+			<form th:action="@{'/categories/' + ${category.id} + '/posts/' +${post.id} }" method="post">
+				<button type="submit">Delete</button>
+			</form>
+		</h1>
+		
+		<a th:href="@{'/categories/' + ${category.id} + '/posts/new'}">Create New Post</a>
+		
+	</div>
 </body>
 </html>

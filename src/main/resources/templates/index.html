@@ -6,11 +6,13 @@
 <title>Shitty CraigsList springboot crud Demo</title>
 </head>
 <body>
-	<h1>Shitty CraigsList springboot crud Demo</h1>
-	
-	<h1 th:each="category : ${categories}">
-		<a th:href="@{'/categories/' + ${category.id} + '/post'}"><span th:text = "${category.name}"></span></a>
-	</h1>
+	<div align="center">
+		<h1>Shitty CraigsList springboot crud Demo</h1>
+		
+		<h1 th:each="category : ${categories}">
+			<a th:href="@{'/categories/' + ${category.id} + '/posts'}"><span th:text = "${category.name}"></span></a>
+		</h1>
+	</div>
 
 </body>
 </html>

@@ -25,7 +25,7 @@ public class Post {
 	private String name;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
-//	@JoinColumn(name = "category_id")
+	@JoinColumn(name = "category_id")
 	private Category category;
 	
 	@Column(name = "updated_date", insertable = false, updatable = false)

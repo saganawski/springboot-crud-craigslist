@@ -25,19 +25,4 @@ public class CategoryController {
 		return "index.html";
 	}
 	
-	
-//	@GetMapping("subcategory/{name}")
-//	public String getSubCategory(@PathVariable("name") final String name, Model model) {
-//		final List<String> posts = Arrays.asList("post-1","post-2","post-3");
-//		
-//		model.addAttribute("name", name);
-//		model.addAttribute("posts",posts);
-//		return "subcategory";
-//	}
-//	
-//	@GetMapping("post/{name}")
-//	public String getPost(@PathVariable("name") final String name, Model model) {
-//		model.addAttribute("name", name);
-//		return "post";
-//	}
 }
